@@ -1,2 +1,2 @@
 # js-algorithm
-Data structure and algorithm in Javascript.
+Data structure and algorithm in JavaScript.
