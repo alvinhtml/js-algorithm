@@ -155,3 +155,29 @@ function walkPostOrder(root) {
   return result.reverse()
 }
 walkPostOrder(root)
+
+
+// 迭代
+function* iWalkPreOrder(root) {
+  if (root === null) {
+    return
+  }
+
+  const stack = [root]
+
+  while (stack.length) {
+    const item = stack.pop()
+    yield item
+    if (item.right) {
+      stack.push(item.right)
+    }
+    if (item.left) {
+      stack.push(item.left)
+    }
+  }
+}
+
+
+for (let node of iWalkPreOrder(root)) {
+  console.log(node)
+}
